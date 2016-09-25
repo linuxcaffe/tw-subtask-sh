@@ -32,7 +32,7 @@ Now task 142 has a(nother) subtask/annotation. It exists only as metadata of 142
 
 ### Invoking a subtask
 
-Suntasks are transformed from annotations to sirst-class-tasks with a command something like;
+Subtasks are transformed from annotations to first-class-tasks with a command something like;
 
 ```
 $ subtw 142
@@ -44,12 +44,14 @@ Called with an ID and no other params, the next (in order of entry time-stamp) s
 
 ### Listing subtasks
 
-If the second argument of subtw is NOT an ID, then the scripts performs a search for matching subtasks.
+If the second argument of subtw is NOT an ID, then the script performs a search for matching subtasks.
 
 ```
 $ subtw office
 ```
 
-would search all sub-tasks for "office" and list matches. If subtw is called with NO trailing arguments, it lists all sub-tasks.
+would search all sub-tasks for "office" and list matches. Note that once a subtask has been invoked, the leading [  ] is changed to [o] so it no longer matches a 'subtw searchterm'.
+
+If subtw is called with NO trailing arguments, it lists all [  ] sub-tasks.
 
 
