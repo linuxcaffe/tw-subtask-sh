@@ -1,6 +1,10 @@
 # tw-subtask-sh
 
-A taskwarrior script to create and invoke subtasks, which are maintained as task annotations.
+A taskwarrior script to create, list and invoke subtasks, which are maintained as task annotations.
+
+```
+Usage: subtw [-a] [-l] [IDs] [filter] [command]
+```
 
 Question: how is a sub-task different than a dependent task? 
 Answer: A sub-task is not yet a "real" task, it is one of N annotations of an actual task, a dependent task is a "live" task linked to it's parent with a dep:uuid. 
@@ -44,14 +48,21 @@ Called with an ID and no other params, the next (in order of entry time-stamp) s
 
 ### Listing subtasks
 
-If the second argument of subtw is NOT an ID, then the script performs a search for matching subtasks.
+If the -l flag is used then the script lists matching subtasks.
 
 ```
-$ subtw office
+$ subtw -l office
 ```
 
-would search all sub-tasks for "office" and list matches. Note that once a subtask has been invoked, the leading [  ] is changed to [o] so it no longer matches a 'subtw searchterm'.
+would search all sub-tasks for "office" and list matches. Note that once a subtask has been invoked, the leading [  ] is changed to [o] so it no longer matches a 'subtw searchterm'. If the ID is added;
+```
+$ subtw -l 142 office
+```
+then subtasks of 142, matching "office", would be listed. Using just the -l flag lists all subtasks;
+```
+subtw -l
+```
 
-If subtw is called with NO trailing arguments, it lists all [  ] sub-tasks.
+If subtw is called with NO arguments, it displays help text.
 
 
