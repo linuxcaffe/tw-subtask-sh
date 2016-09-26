@@ -3,7 +3,7 @@
 A taskwarrior script to create, list and invoke subtasks, which are maintained as task annotations.
 
 ```
-Usage: subtw [-a] [-l] [IDs] [filter] [command]
+Usage: subtw [-a] [-l|-L] [IDs] [filter] [command]
 ```
 
 Question: how is a sub-task different than a dependent task? 
@@ -48,7 +48,7 @@ Called with an ID and no other params, the next (in order of entry time-stamp) s
 
 ### Listing subtasks
 
-If the -l flag is used then the script lists matching subtasks.
+If the -l flag is used then the script lists matching subtasks. The -L flag does the same, but also lists subtasks that have already been invoked. By default, subtw lists and invokes according to annotation-timestamp-order. To override this, and list or invoke in alpha-numeric order, use the -a flag.
 
 ```
 $ subtw -l office
