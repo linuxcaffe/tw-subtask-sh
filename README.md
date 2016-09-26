@@ -1,6 +1,6 @@
 # tw-subtask-sh
 
-A taskwarrior script to create, list and invoke subtasks, which are maintained as task annotations.
+*A taskwarrior script to create, list and invoke subtasks, which are maintained as task annotations.*
 
 ```
 Usage: subtw [-a] [-l|-L] [IDs] [filter] [command]
@@ -44,7 +44,7 @@ $ subtw 142
 
 Note the trailing task ID, and no other parameters.
 
-Called with an ID and no other params, the next (in order of entry time-stamp) sub-task (annotation that starts with "[ ] ") of 142 is invoked ($ task add $WHATEVER_YOU_WROTE) and the "checkbox" is upgraded to "[o] ". Once a sub-task has been invoked, it becomes it's own, actual task, and a dependency of the original task. 
+Called with an ID and no other params, the next (in order of entry time-stamp) sub-task (annotation that starts with "[ ] ") of 142 is invoked ($ task add $WHATEVER_YOU_WROTE). To override the timestamp order, use the -a flag (alpha-numeric). Once a sub-task has been invoked, it becomes it's own, actual task, the "checkbox" is upgraded to "[o] " and the new task becomes a dependency of the original task. 
 
 ### Listing subtasks
 
