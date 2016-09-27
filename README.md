@@ -17,7 +17,7 @@ Answer: it starts with
 "[ ] description" 
 ```
 
-The description of a sub-task can also contain any associated metadata, written as you would when you first create a task. 
+The description of a sub-task can also contain any associated metadata, written as you would when you first create a task.
 
 ### Creating a subtask
 
