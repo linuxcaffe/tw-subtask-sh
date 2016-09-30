@@ -5,7 +5,14 @@
 ```
 Usage: subtw [-a] [-l|-L] [IDs] [filter] [command]
 ```
-Using subtasks in this way allows the user to pack any number of subtasks into a single task, for example, the task "clean the garage" could have, as annotations, "[  ] stack the wood, [  ] put away tools, [  ] sweep the floor, [  ] take out garbage" etc, in a specific order. Until you decide to start cleaning the garage, none of these subtasks clutter up your task list, but when you start it, those subtasks can be be upgraded to proper tasks, with attributes, that can made active, and be timed and will show up in your completion stats. It's a way of bundling all of the steps required of a more complex task, and keeping them out of the way until the main task is started.
+Using the subtw command allows the user to pack any number of subtasks into a single task. For example, the task "clean the garage" could have, as annotations;
+```
+[  ] stack the wood
+[  ] put away tools
+[  ] sweep the floor
+[  ] take out garbage
+```
+etc, in a specific order, and until you decide to start cleaning the garage, none of these subtasks clutter up your task list. When you actually start the main task, those subtasks can be be upgraded (invoked) to become proper tasks, with attributes, that can made active, and be timed and will show up in your completion stats. It's a way of bundling all of the steps required of a more complex task, and keeping them out of the way until the main task is started.
 
 Question: how is a sub-task different than a dependent task? 
 Answer: A sub-task is not yet a "real" task, it is one of N annotations of an actual task, a dependent task is a regular task linked to it's parent with a dep:uuid. 
