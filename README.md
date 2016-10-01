@@ -49,6 +49,11 @@ Subtasks are transformed from annotations to first-class-tasks with a command so
 ```
 $ subtw 142
 ```
+When a subtask is invoked;
+* it is added as a new task with 'task add $SUBTASK_TEXT' verbatim, and gets it's own uuid.
+* the new task is made a dependency of the main task.
+* it inherits any project or tag attributes of the main task, merged with any subtask metadata.
+^ the annotation's leading "[ ] " is changed to "[o] ". (later changed to "[S] ", "[X] ", "[D] ")
 
 Note the trailing task ID, and no other parameters.
 
