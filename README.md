@@ -42,10 +42,24 @@ $ subtw 142 Pick up letters at the Post office proj:admin pri:h +mail +car
 
 then task 142 has a(nother) subtask/annotation. It exists only as metadata of 142 until it is "invoked".
 
+### Listing subtasks
+The -l flag is used to list matching subtasks.
+```
+$ subtw -l <filter>
+```
+By default, matching sub-tasks are listed in in timestamp-order, which is also the order in which they were enterred. To override this, and list in (alpha)numeric order (eg, if you numbered your steps) use the -n flag
+```
+$ subtw -ln <filter>
+```
+To also show subtasks that have already been invoked, add the -a flag
+```
+$ subtw -la <filter>
+```
+If subtw is called with NO arguments, or with the -h flag, it displays help text.
+
 ### Invoking a subtask
 
 Subtasks are transformed from annotations to first-class-tasks with a command something like;
-
 ```
 $ subtw 142
 ```
@@ -56,26 +70,4 @@ When a subtask is invoked;
 * the annotation's leading "[ ] " is changed to "[o] ". (later changed to "[S] ", "[X] " or "[D] ")
 
 Called with an ID and no other params, the next (in order of entry time-stamp) sub-task (annotation that starts with "[ ] ") of 142 is invoked ($ task add $WHATEVER_YOU_WROTE). To override the timestamp order, use the -a flag (alpha-numeric). Once a sub-task has been invoked, it becomes it's own, actual task, the "checkbox" is upgraded to "[o] " and the new task becomes a dependency of the original task. 
-
-### Listing subtasks
-
-If the -l flag is used then the script lists matching and "ready" subtasks. A "ready subtask is one that has not yet been invoked. The -L flag also lists subtasks that have already been invoked. By default, subtw lists and invokes according to annotation-timestamp-order. To override this, and list or invoke in alpha-numeric order, use the -a flag.
-
-```
-$ subtw -l office
-```
-
-would search all sub-tasks for "office" and list matches. Note that once a subtask has been invoked, the leading [  ] is changed to [o] so it no longer matches a 'subtw searchterm'. If the ID is added;
-```
-$ subtw -l 142 office
-```
-then subtasks of 142, matching "office", would be listed. 
-
-Using just the -l flag lists all subtasks;
-```
-subtw -l
-```
-
-If subtw is called with NO arguments, it displays help text.
-
 
