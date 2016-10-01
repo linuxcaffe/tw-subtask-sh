@@ -34,10 +34,10 @@ A subtask can be created in two ways; as a regular annotation using 'task annot"
 $ tw 142 annot '[ ] Pick up letters at the Post office proj:admin pri:h +mail +car'
 ```
 
-or (better) using subtw, as in;
+or (better) using subtw with the -c flag, as in;
 
 ```
-$ subtw 142 Pick up letters at the Post office proj:admin pri:h +mail +car
+$ subtw -c 142 Pick up letters at the Post office proj:admin pri:h +mail +car
 ```
 
 then task 142 has a(nother) subtask/annotation. It exists only as metadata of 142 until it is "invoked".
