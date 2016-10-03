@@ -2,6 +2,8 @@
 
 *A taskwarrior script to create, list and invoke subtasks, which are maintained as task annotations.*
 
+STATUS: pre-alpha
+
 ```
 Usage: subtw [-a] [-l|-L] [IDs] [filter] [command]
 ```
