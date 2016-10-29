@@ -71,5 +71,3 @@ When a subtask is invoked;
 * it inherits any project or tag attributes of the main task, merged with any subtask metadata.
 * the annotation's leading "[ ] " is changed to "[o] ". (later changed to "[S] ", "[X] " or "[D] ")
 
-Called with an ID and no other params, the next (in order of entry time-stamp) sub-task (annotation that starts with "[ ] ") of 142 is invoked ($ task add $WHATEVER_YOU_WROTE). To override the timestamp order, use the -a flag (alpha-numeric). Once a sub-task has been invoked, it becomes it's own, actual task, the "checkbox" is upgraded to "[o] " and the new task becomes a dependency of the original task. 
-
